@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build:choo": "browserify -e node_modules/choo/index.js -g unassertify -g uglifyify -p bundle-collapser/plugin -s Choo -o choo.js",
-    "build:html": "browserify node_modules/bel/index.js -g unassertify -g uglifyify -p bundle-collapser/plugin -s html -o html.js",
+    "build:html": "browserify -e node_modules/bel/index.js -g unassertify -g uglifyify -p bundle-collapser/plugin -s html -o html.js",
     "build": "npm run build:choo && npm run build:html",
     "test": "echo 1"
   },
