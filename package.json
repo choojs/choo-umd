@@ -1,0 +1,32 @@
+{
+  "name": "choo-umd",
+  "version": "1.0.0",
+  "description": "umd build for choo framework",
+  "main": "choo.js",
+  "files": [
+    "choo.js",
+    "html.js"
+  ],
+  "scripts": {
+    "build:choo": "browserify -e node_modules/choo/index.js -g unassertify -g uglifyify -p bundle-collapser/plugin -s Choo -o choo.js",
+    "build:html": "browserify node_modules/bel/index.js -g unassertify -g uglifyify -p bundle-collapser/plugin -s html -o html.js",
+    "build": "npm run build:choo && npm run build:html",
+    "test": "echo 1"
+  },
+  "keywords": [
+    "choo",
+    "standalone",
+    "umd"
+  ],
+  "author": "YerkoPalma",
+  "repository": "choojs/choo-umd",
+  "license": "MIT",
+  "dependencies": {
+    "choo": "^6.0.0"
+  },
+  "devDependencies": {
+    "bundle-collapser": "^1.3.0",
+    "uglifyify": "^4.0.3",
+    "unassertify": "^2.0.4"
+  }
+}

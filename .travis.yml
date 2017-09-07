@@ -1,0 +1,10 @@
+sudo: false
+before_deploy: npm install -g browserify && npm run build
+deploy:
+  provider: npm
+  email: yerko.palma@usach.cl
+  api_key:
+    secure: ewD5n/KGcfyVDTA6Gev8bboBPH3OKCFyQkhUXOSpm6OFx+HG2H8I+FI6IpkSMFuphxFq1CajTC1U5DsY3nBtL7+7z+mjOFycsRbmc/0c9NSnTYHonNb1hi3WW1DgD+ouIsC8CMdJmE24aIxkTn6XQ8TTNZUq+QaVbmM9s9MMdpSOf9Z3ZyR8OLc7Afcf+QxujeYroRgD936RjYsRjxbE/FLPX9xaHhtK34DJy37tVmnJUY4cRNWYTSXzL6eQY59uj9KWxWRrcHsqDK2n6LwJn3wCm6BhW7/nm+Nl+kEfhVIcnvQGOIsNYqNYOYFd8CdzKJcK9KkT3rJaxN3y0fHW23qARCbRVxfMLvc865BC10xcmsW8UXrIukVPq8x/K0tzYWtPJuJoB5MKJsO8TKEH6YrOWfu+aNQ5W5jc9SNbKWDd6F1USR2bYS12dKywVN0Q3ArO5hwf812bbJ25PbZ4BLn9bU0HnJq2A9dUNphC6jHiiClunSzpQHKj6myx+Sn15T1BC8UWBdRRWYjG3dPN/ltjHH5xE3oCecb9mJMuy7tWszwl5JFXKD+DesvQB8YQIQY6HRX55c9LWdxkS7m86m3gy7Gbu34gaIld69mR8VZT4TG1u6F5Y3oDowB34rvHNXKC7epWZG/z5LLehXP30KGG1IaodMrITshzF1syaVA=
+  skip_cleanup: true
+  on:
+    branch: master
